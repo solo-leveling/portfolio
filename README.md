@@ -89,19 +89,9 @@ git push
 
 ## What to replace before sending this to companies
 
-- **Contact email** — `profile.email` in `src/data/portfolioData.js` is a placeholder.
-- **LinkedIn** — `profile.linkedin` is empty; add your URL or leave blank to hide the button.
-- **Japanese Learning Platform** project — no matching repo was found on your GitHub, so this entire
-  card (description, tech stack, links) is a placeholder. Replace it with your real project, or
-  remove it from the `projects` array.
-- **Notes App live demo link** — the URL currently set on the GitHub repo
-  (`notes-kmistryys-projects.vercel.app`) looks like it may belong to a different Vercel account.
-  Verify it's actually your deployment before sharing it, or remove/replace it.
-- **Work experience** — no work history was provided, so `experience` in the data file is a
-  placeholder. Add your real role(s), or delete the Experience section from `src/App.jsx` if not
-  applicable yet.
-- **Certification and education dates** — add the dates you earned your AWS Certified Cloud
-  Practitioner, IT Passport, and JLPT N1, and your Ehle Institute enrollment/graduation period.
+- **Resume download** — `profile.resumeUrl` points at `/resume.pdf`, but no such file exists yet and
+  no button links to it. Add the PDF to `public/resume.pdf` and wire up a download button in
+  `src/components/Hero.jsx` if you want one.
 - **OG image** — `public/og-image.svg` is a simple placeholder banner. Replace it with a real
   1200×630 PNG/JPG screenshot for the best link-preview compatibility on LinkedIn/Twitter/etc.
 - **Site URL** — once deployed, replace `https://your-portfolio-domain.example` in `index.html`,

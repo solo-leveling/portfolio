@@ -9,14 +9,12 @@ export const profile = {
   location: 'Osaka, Japan',
   tagline:
     'Web developer based in Osaka, building with JavaScript, PHP/Laravel, and React — currently learning cloud infrastructure (AWS, Terraform, Kubernetes) and looking for IT / Software Engineer opportunities in Japan.',
-  // [PLACEHOLDER] Replace with the email you want listed publicly.
-  email: 'your-email@example.com',
+  email: 'littleshadow.mdy@gmail.com',
   github: 'https://github.com/solo-leveling',
-  // [PLACEHOLDER] Add your LinkedIn URL if you have one, or remove this field
-  // and its usage in Contact.jsx.
-  linkedin: '',
-  // [PLACEHOLDER] Add a resume PDF to /public/resume.pdf and keep this path,
-  // or remove the download button in Hero.jsx if you don't want one yet.
+  linkedin: 'https://www.linkedin.com/in/hein-htet-b88388383/',
+  // [PLACEHOLDER] No resume file exists yet at public/resume.pdf — this field
+  // isn't linked from any component yet. Add the PDF and wire up a download
+  // button in Hero.jsx if you want one.
   resumeUrl: '/resume.pdf',
 }
 
@@ -29,30 +27,18 @@ export const about = {
 
 export const skills = {
   languages: ['JavaScript', 'PHP', 'HTML', 'CSS'],
-  frameworks: ['React', 'Node.js', 'Laravel'],
+  frameworks: ['React', 'Node.js', 'Express.js', 'Laravel', 'REST APIs'],
+  databases: ['MongoDB', 'MySQL'],
   cloud: ['AWS', 'Terraform', 'Kubernetes'],
 }
 
 export const projects = [
   {
-    title: 'Japanese Learning Platform',
-    // [PLACEHOLDER] This project was not found in your public GitHub repos.
-    // Replace this description, tech stack, and links with the real project details.
-    description:
-      '[PLACEHOLDER] A web platform for learning Japanese vocabulary and grammar, built to help self-learners track progress. Replace this description with what the project actually does.',
-    stack: ['[PLACEHOLDER TECH STACK]'],
-    github: '',
-    demo: '',
-  },
-  {
     title: 'Notes App',
     description:
-      'A full-stack notes application for creating, organizing, and managing personal notes, with a React (Vite) frontend and a Node.js backend.',
-    stack: ['React', 'Vite', 'TanStack Query', 'Node.js', 'Axios'],
+      'A full-stack personal notes application with JWT authentication and full CRUD via a REST API. Built solo end-to-end — requirements, design, implementation, testing, and deployment.',
+    stack: ['React', 'Vite', 'TanStack Query', 'Node.js', 'Express', 'MongoDB Atlas', 'JWT Auth'],
     github: 'https://github.com/solo-leveling/notes',
-    // [PLACEHOLDER] This live URL was set on the repo but looks like it may
-    // point to someone else's Vercel account name — please verify it works
-    // and points to your own deployment before sharing it, or remove it.
     demo: 'https://notes-kmistryys-projects.vercel.app/login',
   },
   {
@@ -73,15 +59,13 @@ export const projects = [
   },
 ]
 
-// [PLACEHOLDER] No work experience was provided — add your real roles here,
-// or remove the Experience section from App.jsx if not applicable yet.
 export const experience = [
   {
-    role: '[PLACEHOLDER] Job Title',
-    company: '[PLACEHOLDER] Company Name',
-    period: '[PLACEHOLDER] e.g. 2024 – Present',
+    role: 'Web Application Engineer',
+    company: 'Scala Next Inc. (Mandalay Branch)',
+    period: '2020/1 – 2022/4',
     description:
-      '[PLACEHOLDER] Briefly describe your responsibilities and achievements in this role.',
+      'Completed a one-year training program in PHP (Laravel) web application development, covering design, implementation, and testing. Afterward, joined an in-house recipe web service project, taking over and maintaining an existing codebase from a senior engineer: understanding legacy specifications, writing and running unit tests, investigating and fixing bugs, and implementing frontend and backend features in PHP (Laravel).',
   },
 ]
 
@@ -89,18 +73,17 @@ export const certifications = [
   {
     name: 'AWS Certified Cloud Practitioner',
     issuer: 'Amazon Web Services',
-    // [PLACEHOLDER] Add the date you earned this certification.
-    date: '[PLACEHOLDER DATE]',
+    date: '2026/9/11',
   },
   {
     name: 'IT Passport',
     issuer: 'IPA (Information-technology Promotion Agency, Japan)',
-    date: '[PLACEHOLDER DATE]',
+    date: '2018/6',
   },
   {
     name: 'JLPT N1',
     issuer: 'Japan Foundation / Japan Educational Exchanges and Services',
-    date: '[PLACEHOLDER DATE]',
+    date: '2024/7',
   },
 ]
 
@@ -108,7 +91,6 @@ export const education = [
   {
     school: 'Ehle Institute of Technology (専門学校)',
     program: 'AI Business / AI Technology',
-    // [PLACEHOLDER] Add your enrollment/graduation dates.
-    period: '[PLACEHOLDER PERIOD]',
+    period: '2025/4 - 2027/3',
   },
 ]

@@ -4,6 +4,7 @@ import { skills } from '../data/portfolioData'
 const groups = [
   { label: 'Languages', items: skills.languages },
   { label: 'Frameworks & Tools', items: skills.frameworks },
+  { label: 'Databases', items: skills.databases },
   { label: 'Cloud & Infrastructure', items: skills.cloud },
 ]
 
@@ -12,7 +13,7 @@ export default function Skills() {
     <section id="skills" className="bg-slate-50 py-16">
       <div className="mx-auto max-w-5xl px-6">
         <SectionHeading eyebrow="Skills" title="Technical Skills" />
-        <div className="grid gap-8 sm:grid-cols-3">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {groups.map((group) => (
             <div key={group.label}>
               <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-slate-500">
