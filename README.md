@@ -9,13 +9,36 @@ Static site, no backend, no database, no auth — free to host.
 
 Hero · About · Skills · Projects · Experience · Certifications · Education · Contact
 
+Bilingual (English / Japanese) — the toggle button in the nav bar switches every section instantly
+and remembers your choice (`localStorage`).
+
 ## Editing content
 
 All page content lives in one file: [`src/data/portfolioData.js`](src/data/portfolioData.js).
-Edit that file to change your name, bio, skills, projects, experience, certifications, or contact links.
+Edit that file to change your name, bio, skills, projects, experience, certifications, or contact
+links. Text fields that appear in both languages are objects like `{ en: '...', ja: '...' }` — update
+both when you change something. Fields shared across languages (links, dates, tech stack names)
+are plain strings/arrays.
 
-**Search that file for `[PLACEHOLDER]` — several values are sample/guessed data and need your real
-details before you send this site to employers.** See the "What to replace" list below.
+Nav labels, section headings, and button text live in the `ui` export at the bottom of the same file.
+
+## Resume download
+
+The "Download Resume" button links to `public/resume.pdf` — a redacted one-page summary (name,
+education, work history, certifications, self-PR) with **no phone number, home address, birthdate,
+or gender**, generated from [`scripts/generate_resume_pdf.py`](scripts/generate_resume_pdf.py) using
+`reportlab`. If you update your education/work history in `portfolioData.js`, update the matching
+text in that script too, then regenerate:
+
+```bash
+pip install reportlab
+python scripts/generate_resume_pdf.py
+```
+
+The script hardcodes a Windows font path (`C:\Windows\Fonts\NotoSansJP-VF.ttf`) for Japanese text
+rendering — adjust that path if you run it on macOS/Linux (e.g. point it at a Noto Sans JP `.ttf` you
+install yourself). This PDF is a lightweight public-facing summary, not a replacement for the full
+履歴書/職務経歴書 you send directly to companies.
 
 ## Run locally
 

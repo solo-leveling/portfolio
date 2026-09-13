@@ -1,19 +1,22 @@
 import SectionHeading from './SectionHeading'
-import { projects } from '../data/portfolioData'
+import { projects, ui } from '../data/portfolioData'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Projects() {
+  const { lang } = useLanguage()
+
   return (
     <section id="projects" className="mx-auto max-w-5xl px-6 py-16">
-      <SectionHeading eyebrow="Projects" title="Selected Projects" />
+      <SectionHeading eyebrow={ui.sections.projects.eyebrow[lang]} title={ui.sections.projects.title[lang]} />
       <div className="grid gap-6 sm:grid-cols-2">
         {projects.map((project) => (
           <article
-            key={project.title}
+            key={project.title.en}
             className="flex flex-col rounded-lg border border-slate-200 p-6 transition-shadow hover:shadow-md"
           >
-            <h3 className="text-lg font-semibold text-slate-900">{project.title}</h3>
+            <h3 className="text-lg font-semibold text-slate-900">{project.title[lang]}</h3>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-600">
-              {project.description}
+              {project.description[lang]}
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               {project.stack.map((tech) => (
@@ -33,7 +36,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="text-accent hover:text-accent-dark"
                 >
-                  GitHub →
+                  {ui.projectLinks.github[lang]}
                 </a>
               )}
               {project.demo && (
@@ -43,7 +46,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="text-accent hover:text-accent-dark"
                 >
-                  Live Demo →
+                  {ui.projectLinks.demo[lang]}
                 </a>
               )}
             </div>
