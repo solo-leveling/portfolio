@@ -78,13 +78,13 @@ command `npm run build`, output directory `dist`.
 
 ## Push to GitHub
 
+This is already set up and pushed to https://github.com/solo-leveling/portfolio.
+To push future changes:
+
 ```bash
-git init
 git add .
-git commit -m "Initial portfolio site"
-git branch -M main
-git remote add origin https://github.com/solo-leveling/<your-repo-name>.git
-git push -u origin main
+git commit -m "Update portfolio content"
+git push
 ```
 
 ## What to replace before sending this to companies
