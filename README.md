@@ -3,6 +3,8 @@
 A simple, fast, mobile-responsive personal portfolio site built with React + Vite + Tailwind CSS.
 Static site, no backend, no database, no auth — free to host.
 
+**Live:** https://hein-htet-portfolio-three.vercel.app
+
 ## Sections
 
 Hero · About · Skills · Projects · Experience · Certifications · Education · Contact
@@ -94,7 +96,7 @@ git push
   `src/components/Hero.jsx` if you want one.
 - **OG image** — `public/og-image.svg` is a simple placeholder banner. Replace it with a real
   1200×630 PNG/JPG screenshot for the best link-preview compatibility on LinkedIn/Twitter/etc.
-- **Site URL** — once deployed, replace `https://your-portfolio-domain.example` in `index.html`,
-  `public/robots.txt`, and `public/sitemap.xml` with your real deployed URL.
+- **Site URL** — now live at https://hein-htet-portfolio-three.vercel.app. If you later attach a
+  custom domain, update the URL in `index.html`, `public/robots.txt`, and `public/sitemap.xml`.
 - **Favicon** — `public/favicon.svg` is a simple "HH" monogram placeholder; swap it for your own if
   you'd like something more custom.

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-portfolio-domain.example/sitemap.xml
+Sitemap: https://hein-htet-portfolio-three.vercel.app/sitemap.xml
