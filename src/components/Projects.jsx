@@ -46,8 +46,11 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   className="text-accent hover:text-accent-dark"
                 >
-                  {ui.projectLinks.demo[lang]}
+                  {(project.demoLabel || ui.projectLinks.demo)[lang]}
                 </a>
+              )}
+              {!project.github && project.note && (
+                <span className="font-normal text-slate-500">{project.note[lang]}</span>
               )}
             </div>
           </article>

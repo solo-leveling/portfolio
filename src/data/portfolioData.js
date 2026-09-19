@@ -42,23 +42,51 @@ export const about = {
 export const skillGroups = [
   {
     label: { en: 'Languages', ja: '言語' },
-    items: ['JavaScript', 'PHP', 'HTML', 'CSS'],
+    items: ['JavaScript', 'TypeScript', 'PHP', 'HTML', 'CSS'],
   },
   {
     label: { en: 'Frameworks & Tools', ja: 'フレームワーク・ツール' },
-    items: ['React', 'Node.js', 'Express.js', 'Laravel', 'REST APIs'],
+    items: ['React', 'Node.js', 'Express.js', 'Laravel', 'Prisma', 'REST APIs'],
   },
   {
     label: { en: 'Databases', ja: 'データベース' },
-    items: ['MongoDB', 'MySQL'],
+    items: ['PostgreSQL', 'MongoDB', 'MySQL'],
   },
   {
     label: { en: 'Cloud & Infrastructure', ja: 'クラウド・インフラ' },
-    items: ['AWS', 'Terraform', 'Kubernetes'],
+    items: ['AWS (EC2)', 'Terraform', 'Docker', 'GitHub Actions', 'Kubernetes'],
   },
 ]
 
 export const projects = [
+  {
+    title: {
+      en: 'Japanese Platform — JLPT Learning Platform for Burmese Speakers',
+      ja: 'Japanese Platform － ミャンマー語話者向けJLPT学習プラットフォーム',
+    },
+    description: {
+      en: 'A live JLPT (N5–N1) learning platform built for Burmese-speaking learners: grammar, vocabulary, reading, listening with natural-voice audio, practice questions and full-format mock exams, with Burmese explanations for all 1,122 questions. Runs on AWS (EC2, provisioned with Terraform) with Docker, automatic HTTPS and a GitHub Actions CI/CD pipeline.',
+      ja: 'ミャンマー語を話す学習者向けに開発した、稼働中のJLPT（N5〜N1）学習プラットフォームです。文法・語彙・読解・自然な音声付きの聴解・練習問題・本番形式の模擬試験を備え、全1,122問にミャンマー語の解説を付けています。AWS（EC2、Terraformでプロビジョニング）上でDocker、自動HTTPS、GitHub ActionsによるCI/CDパイプラインを用いて運用しています。',
+    },
+    stack: [
+      'React',
+      'TypeScript',
+      'Tailwind CSS',
+      'TanStack Query',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'Prisma',
+      'Docker',
+      'AWS EC2',
+      'Terraform',
+      'GitHub Actions',
+    ],
+    github: '',
+    demo: 'https://japaneseplatform.com/',
+    demoLabel: { en: 'Live Site →', ja: 'サイトを見る →' },
+    note: { en: 'Code available on request', ja: 'ソースコードはご希望に応じて提供可能です' },
+  },
   {
     title: { en: 'Notes App', ja: 'ノートアプリ（個人開発）' },
     description: {
