@@ -24,21 +24,8 @@ Nav labels, section headings, and button text live in the `ui` export at the bot
 
 ## Resume download
 
-The "Download Resume" button links to `public/resume.pdf` — a redacted one-page summary (name,
-education, work history, certifications, self-PR) with **no phone number, home address, birthdate,
-or gender**, generated from [`scripts/generate_resume_pdf.py`](scripts/generate_resume_pdf.py) using
-`reportlab`. If you update your education/work history in `portfolioData.js`, update the matching
-text in that script too, then regenerate:
-
-```bash
-pip install reportlab
-python scripts/generate_resume_pdf.py
-```
-
-The script hardcodes a Windows font path (`C:\Windows\Fonts\NotoSansJP-VF.ttf`) for Japanese text
-rendering — adjust that path if you run it on macOS/Linux (e.g. point it at a Noto Sans JP `.ttf` you
-install yourself). This PDF is a lightweight public-facing summary, not a replacement for the full
-履歴書/職務経歴書 you send directly to companies.
+The "Download Resume" button serves `public/resume.pdf`, the full 履歴書 (including contact details
+and photo). To update it, replace that file and redeploy.
 
 ## Run locally
 
@@ -114,9 +101,6 @@ git push
 
 ## What to replace before sending this to companies
 
-- **Resume download** — `profile.resumeUrl` points at `/resume.pdf`, but no such file exists yet and
-  no button links to it. Add the PDF to `public/resume.pdf` and wire up a download button in
-  `src/components/Hero.jsx` if you want one.
 - **OG image** — `public/og-image.svg` is a simple placeholder banner. Replace it with a real
   1200×630 PNG/JPG screenshot for the best link-preview compatibility on LinkedIn/Twitter/etc.
 - **Site URL** — now live at https://hein-htet-portfolio-three.vercel.app. If you later attach a
